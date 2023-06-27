@@ -5,10 +5,8 @@ variables:
   value: Container
 - name:  MAVEN_CACHE_FOLDER
   value: $(Pipeline.Workspace)
-- name: projectKey
-  value: mulesoftcoe_healthcare-sys-api
-- name: sonar.host
-  value: htttp::localhost:9000
+- name: sonarHost
+  value:  http://<<host>>:9000
   
 trigger:
   branches:
@@ -37,6 +35,17 @@ jobs:
     displayName: 'Download secure file'
     inputs:
       secureFile: settings.xml
+      
+  - task: SonarQubePrepare@5
+    displayName: Code Validation and Static Analysis
+    inputs:
+      SonarQube: AzurePOCDevOps
+      scannerMode: Other
+      configMode: manual
+      cliProjectKey: $(BuildParameters.cliProjectKey)
+      extraProperties: >-
+
+        sonar.host.url= $(sonarHost)
 
   - task: Maven@3
     displayName: Test
@@ -51,6 +60,7 @@ jobs:
       mavenPOMFile: $(BuildParameters.mavenPOMFile)
       goals: 'clean package -DskipTests'
       options: -s $(mvnSettings.secureFilePath)
+      codeCoverageTool: JaCoCo
       sqAnalysisEnabled: false
       sqMavenPluginVersionChoice: pom
     
@@ -73,3 +83,4 @@ jobs:
     inputs:
       PathtoPublish: $(build.artifactstagingdirectory)
       ArtifactType: $(BuildParameters.ArtifactType)
+
