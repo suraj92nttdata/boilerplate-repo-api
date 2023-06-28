@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<!-- ORGANIZATION_ID value of master org. -->
 	<groupId>com.mycompany</groupId>
-	<artifactId>connectors-version-template</artifactId>
+	<artifactId>boilerplate_repo</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>connectors-version-template</name>
+	<name>boilerplate_repo</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
