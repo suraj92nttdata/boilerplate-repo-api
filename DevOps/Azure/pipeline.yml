@@ -34,7 +34,7 @@ jobs:
     name: mvnSettings
     displayName: 'Download secure file'
     inputs:
-      secureFile: settings.xml
+      secureFile: setting.xml
 
   - task: Maven@3
     displayName: Test
