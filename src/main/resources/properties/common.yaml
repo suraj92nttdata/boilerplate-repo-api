@@ -10,3 +10,11 @@ logSettings:
   maxPayloadLength: "" 
  
 test: "111,222"
+batch:
+  status:
+   key: "JOB_STATUS"
+   running: "RUNNING"
+   complete: "COMPLETE" 
+   
+  execution:
+    queue: "execution.queue" 
