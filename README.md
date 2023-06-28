@@ -6,6 +6,7 @@ Version 2.0 is configured to implement template as an Archetype, Maven archetype
 
 The benefit of using this template project is the time that will be saved configuring the core api components as well as the security of following the best practices around this core components.
 
+
 The components that are already configured are:
 
 Secure Properties Configuration, for environment-specific values
