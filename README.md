@@ -1,6 +1,6 @@
 Mule API starter project template
 
-This Template API 2.0 is a mule api project template that you can use as a starting point for development of your own implementation.
+This Templates API 2.0 is a mule api project template that you can use as a starting point for development of your own implementation.
 
 Version 2.0 is configured to implement template as an Archetype, Maven archetype allow you to save time when a a new project is requiered
 
