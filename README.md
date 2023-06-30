@@ -1,4 +1,4 @@
-Mule API starter project template
+Mule API starter project templates
 
 This Templates API 2.0 is a mule apis project template that you can use as a starting point for development of your own implementation.
 
